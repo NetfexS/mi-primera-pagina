@@ -1,0 +1,514 @@
+/* ESTILOS GENERALES: definen el aspecto de todas las páginas. */
+* {
+    /* Define el espacio exterior alrededor del elemento. */
+    margin: 0; /* Quita los márgenes que el navegador agrega por defecto. */
+    /* Define el espacio interior entre el contenido y el borde. */
+    padding: 0; /* Quita los espacios internos predeterminados. */
+    /* Hace que el ancho y alto incluyan el relleno y el borde. */
+    box-sizing: border-box; /* Hace que el ancho incluya el padding y el borde. */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f6f2;
+    color: #333; 
+    line-height: 1.6; 
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        #e5dfd2 10px,
+        #e5dfd2 11px
+        );
+}
+
+html {
+    /* Controla cómo se realiza el desplazamiento dentro de la página. */
+    scroll-behavior: smooth; /* Desplaza suavemente al tocar enlaces internos. */
+}
+
+/* HEADER: tiene el mismo color que el footer para mantener un diseño uniforme. */
+.site-header {
+    /* Establece el color de fondo. */
+    background-color: #24594f;
+    /* Establece el color del texto. */
+    color: white;
+    /* Define el espacio interior entre el contenido y el borde. */
+    padding: 18px 6%;
+    
+}
+
+.header-inner {
+    /* Limita el ancho máximo del elemento. */
+    max-width: 1100px; /* Evita que el contenido se estire demasiado en pantallas grandes. */
+    /* Define el espacio exterior alrededor del elemento. */
+    margin: auto; /* Centra el contenido del encabezado. */
+    /* Define cómo se organiza y muestra el elemento. */
+    display: flex; /* Coloca el nombre y el menú en la misma fila. */
+    /* Distribuye los elementos en el eje principal del contenedor flex. */
+    justify-content: space-between;
+    /* Alinea los elementos en el eje transversal del contenedor flex. */
+    align-items: center;
+    /* Define el espacio entre elementos de una cuadrícula o contenedor flex. */
+    gap: 20px;
+}
+
+.brand {
+    /* Establece el color del texto. */
+    color: white;
+    /* Controla decoraciones del texto, como el subrayado. */
+    text-decoration: none;
+    /* Define el tamaño de la letra. */
+    font-size: 23px;
+    /* Define el grosor de la letra. */
+    font-weight: bold;
+}
+
+.main-nav {
+    /* Define cómo se organiza y muestra el elemento. */
+    display: flex;
+    /* Define el espacio entre elementos de una cuadrícula o contenedor flex. */
+    gap: 22px; /* Deja espacio entre los enlaces del menú. */
+}
+
+.main-nav a {
+    /* Establece el color del texto. */
+    color: white;
+    /* Controla decoraciones del texto, como el subrayado. */
+    text-decoration: none;
+}
+
+.main-nav a:hover,
+.footer-home:hover {
+    /* Controla decoraciones del texto, como el subrayado. */
+    text-decoration: underline; /* Subraya los enlaces al pasar el cursor. */
+}
+
+/* CONTENIDO: centra el contenido y limita su ancho. */
+main {
+    /* Define el ancho del elemento. */
+    width: 90%;
+    /* Limita el ancho máximo del elemento. */
+    max-width: 1100px;
+    /* Define el espacio exterior alrededor del elemento. */
+    margin: 35px auto;
+}
+
+/* INTRODUCCIÓN: pequeño bloque de bienvenida antes de mostrar los destinos. */
+.welcome {
+    /* Establece el color de fondo. */
+    background-color: #e4eee9;
+    /* Define el espacio interior entre el contenido y el borde. */
+    padding: 35px;
+    /* Esta propiedad CSS controla el valor de «margin-bottom» para el elemento seleccionado. */
+    margin-bottom: 35px;
+    /* Redondea las esquinas del elemento. */
+    border-radius: 8px;
+    
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.eyebrow {
+    /* Establece el color del texto. */
+    color: #47766b;
+    /* Define el tamaño de la letra. */
+    font-size: 13px;
+    /* Define el grosor de la letra. */
+    font-weight: bold;
+    /* Esta propiedad CSS controla el valor de «margin-bottom» para el elemento seleccionado. */
+    margin-bottom: 8px;
+   
+}
+
+.welcome h1 {
+    /* Establece el color del texto. */
+    color: #24594f;
+    /* Define el tamaño de la letra. */
+    font-size: 34px;
+    /* Esta propiedad CSS controla el valor de «margin-bottom» para el elemento seleccionado. */
+    margin-bottom: 12px;
+    
+}
+
+.welcome h1 span {
+    /* Establece el color del texto. */
+    color: #b66d48;
+}
+
+.hero-copy {
+    /* Limita el ancho máximo del elemento. */
+    max-width: 700px;
+    /* Esta propiedad CSS controla el valor de «margin-bottom» para el elemento seleccionado. */
+    margin-bottom: 18px;
+}
+
+.hero-boton,
+.card-link {
+    /* Define cómo se organiza y muestra el elemento. */
+    display: inline-block;
+    /* Establece el color de fondo. */
+    background-color: #24594f;
+    /* Establece el color del texto. */
+    color: white;
+    /* Controla decoraciones del texto, como el subrayado. */
+    text-decoration: none;
+    /* Define el espacio interior entre el contenido y el borde. */
+    padding: 9px 15px;
+    /* Redondea las esquinas del elemento. */
+    border-radius: 5px;
+    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.hero-boton:hover,
+.card-link:hover {
+    /* Establece el color de fondo. */
+    background-color: #39796b;
+}
+
+/* TÍTULOS Y PÁRRAFOS: mantienen tamaños y espacios parecidos en todo el sitio. */
+h1, h2, h3 {
+    /* Establece el color del texto. */
+    color: #24594f;
+    /* Controla la altura de cada línea de texto. */
+    line-height: 1.3;
+    
+}
+
+h2 {
+    /* Define el tamaño de la letra. */
+    font-size: 27px;
+    /* Define el espacio exterior alrededor del elemento. */
+    margin: 28px 0 18px;
+}
+
+h3 {
+    /* Define el tamaño de la letra. */
+    font-size: 20px;
+    /* Esta propiedad CSS controla el valor de «margin-bottom» para el elemento seleccionado. */
+    margin-bottom: 8px;
+}
+
+p {
+    /* Esta propiedad CSS controla el valor de «margin-bottom» para el elemento seleccionado. */
+    margin-bottom: 14px;
+}
+
+/* TARJETAS DE INICIO: muestran cada destino en dos columnas. */
+.destinos-seccion {
+    /* Define cómo se organiza y muestra el elemento. */
+    display: grid;
+    /* Define cuántas columnas tiene la cuadrícula y su tamaño. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* Define el espacio entre elementos de una cuadrícula o contenedor flex. */
+    gap: 22px;
+}
+
+.destinos-seccion .section-heading {
+    /* Indica en qué columna o columnas se ubica un elemento de la cuadrícula. */
+    grid-column: 1 / -1; /* El título ocupa el ancho de las dos columnas. */
+    /* Esta propiedad CSS controla el valor de «margin-bottom» para el elemento seleccionado. */
+    margin-bottom: 0;
+}
+
+.destino-card {
+    /* Establece el color de fondo. */
+    background-color: white;
+    /* Define el borde: grosor, tipo de línea y color. */
+    border: 1px solid #e0e5e1;
+    /* Redondea las esquinas del elemento. */
+    border-radius: 8px;
+    /* Controla qué ocurre si el contenido supera los límites del contenedor. */
+    overflow: hidden; /* Mantiene la imagen dentro de las esquinas redondeadas. */
+    /* Esta propiedad CSS controla el valor de «padding-bottom» para el elemento seleccionado. */
+    padding-bottom: 18px;
+   
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.12);
+}
+
+.destino-image {
+    /* Esta propiedad CSS controla el valor de «margin-bottom» para el elemento seleccionado. */
+    margin-bottom: 15px;
+}
+
+.destino-image img {
+    /* Define el ancho del elemento. */
+    width: 100%;
+    /* Define la altura del elemento. */
+    height: 220px;
+    /* Ajusta la imagen al espacio disponible sin deformarla. */
+    object-fit: cover; /* Recorta la imagen sin deformarla. */
+}
+
+.destino-image figcaption {
+    /* Define el espacio interior entre el contenido y el borde. */
+    padding: 7px 16px 0;
+    /* Establece el color del texto. */
+    color: #666;
+    /* Define el tamaño de la letra. */
+    font-size: 13px;
+}
+
+.destino-card h3,
+.destino-card p,
+.destino-card .card-link {
+    /* Esta propiedad CSS controla el valor de «margin-left» para el elemento seleccionado. */
+    margin-left: 17px;
+    /* Esta propiedad CSS controla el valor de «margin-right» para el elemento seleccionado. */
+    margin-right: 17px;
+}
+
+/* BLOQUE SOBRE LA PÁGINA: separa la explicación del resto del contenido. */
+.about-panel {
+    /* Establece el color de fondo. */
+    background-color: #e4eee9;
+    /* Define el espacio interior entre el contenido y el borde. */
+    padding: 22px;
+    /* Esta propiedad CSS controla el valor de «margin-top» para el elemento seleccionado. */
+    margin-top: 35px;
+    /* Redondea las esquinas del elemento. */
+    border-radius: 8px;
+   
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.about-panel h2 {
+    /* Esta propiedad CSS controla el valor de «margin-top» para el elemento seleccionado. */
+    margin-top: 0;
+}
+
+/* PÁGINAS DE CADA DESTINO: presenta primero la información general. */
+.destino-overview {
+    background-color: white;
+    padding: 35px;
+    border-radius: 16px;
+    margin-bottom: 35px;
+    border: 1px solid #e0e5e1;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.destino-overview h1 {
+    color: #145b52;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.destino-overview h2 {
+    color: #145b52;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.destino-overview p {
+    color: #4a5552;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.destino-overview ul {
+    padding-left: 0;
+    margin: 20px 0;
+    list-style: none;
+}
+
+.destino-overview li {
+    margin-bottom: 12px;
+    color: #46534f;
+    line-height: 1.6;
+}
+/* Cada sección separa atractivos, gastronomía, sitios y actividades. */
+.content-section {
+    /* Define el espacio exterior alrededor del elemento. */
+    margin: 35px 0;
+}
+
+.content-section > h2 {
+    /* Define el borde inferior del elemento. */
+    border-bottom: 2px solid #dce6e0;
+    /* Esta propiedad CSS controla el valor de «padding-bottom» para el elemento seleccionado. */
+    padding-bottom: 8px;
+}
+
+/* Las tarjetas de atractivos muestran el texto junto a su imagen. */
+.content-card {
+    /* Establece el color de fondo. */
+    background-color: white;
+    /* Define el borde: grosor, tipo de línea y color. */
+    border: 1px solid #e0e5e1;
+    /* Redondea las esquinas del elemento. */
+    border-radius: 8px;
+    /* Define el espacio interior entre el contenido y el borde. */
+    padding: 20px;
+    /* Define el espacio exterior alrededor del elemento. */
+    margin: 16px 0;
+}
+
+.content-card.with-photo {
+    /* Define cómo se organiza y muestra el elemento. */
+    display: grid;
+    /* Define cuántas columnas tiene la cuadrícula y su tamaño. */
+    grid-template-columns: 1fr 260px;
+    /* Alinea los elementos en el eje transversal del contenedor flex. */
+    align-items: center;
+    /* Define el espacio entre elementos de una cuadrícula o contenedor flex. */
+    gap: 22px;
+}
+
+.content-card.with-photo h3,
+.content-card.with-photo p {
+    /* Indica en qué columna o columnas se ubica un elemento de la cuadrícula. */
+    grid-column: 1;
+}
+
+.inline-photo {
+    /* Indica en qué columna o columnas se ubica un elemento de la cuadrícula. */
+    grid-column: 2;
+    /* Indica en qué fila o filas se ubica un elemento de la cuadrícula. */
+    grid-row: 1 / span 2;
+    /* Define el espacio exterior alrededor del elemento. */
+    margin: 0;
+}
+
+.inline-photo img {
+    /* Define el ancho del elemento. */
+    width: 100%;
+    /* Define la altura del elemento. */
+    height: 175px;
+    /* Ajusta la imagen al espacio disponible sin deformarla. */
+    object-fit: cover;
+    /* Redondea las esquinas del elemento. */
+    border-radius: 5px;
+}
+
+.inline-photo figcaption {
+    /* Establece el color del texto. */
+    color: #666;
+    /* Define el tamaño de la letra. */
+    font-size: 12px;
+    /* Esta propiedad CSS controla el valor de «margin-top» para el elemento seleccionado. */
+    margin-top: 5px;
+}
+
+/* Estilos para listas y elementos de las páginas de destino. */
+ul, ol {
+    /* Esta propiedad CSS controla el valor de «padding-left» para el elemento seleccionado. */
+    padding-left: 25px;
+    /* Define el espacio exterior alrededor del elemento. */
+    margin: 15px 0;
+}
+
+li {
+    /* Esta propiedad CSS controla el valor de «margin-bottom» para el elemento seleccionado. */
+    margin-bottom: 7px;
+}
+
+aside {
+    /* Establece el color de fondo. */
+    background-color: #e4eee9;
+    /* Define el espacio interior entre el contenido y el borde. */
+    padding: 18px;
+    /* Define el espacio exterior alrededor del elemento. */
+    margin: 20px 0;
+    /* Redondea las esquinas del elemento. */
+    border-radius: 6px;
+}
+
+/* IMÁGENES: evita que sobresalgan de sus contenedores. */
+img {
+    /* Limita el ancho máximo del elemento. */
+    max-width: 100%;
+    /* Define cómo se organiza y muestra el elemento. */
+    display: block;
+}
+
+/* FOOTER: utiliza el mismo verde del encabezado. */
+.site-footer {
+    /* Establece el color de fondo. */
+    background-color: #24594f;
+    /* Establece el color del texto. */
+    color: white;
+    /* Define el espacio interior entre el contenido y el borde. */
+    padding: 22px 6%;
+    /* Esta propiedad CSS controla el valor de «margin-top» para el elemento seleccionado. */
+    margin-top: 40px;
+}
+
+.footer-inner {
+    /* Limita el ancho máximo del elemento. */
+    max-width: 1100px;
+    /* Define el espacio exterior alrededor del elemento. */
+    margin: auto;
+    /* Define cómo se organiza y muestra el elemento. */
+    display: flex;
+    /* Distribuye los elementos en el eje principal del contenedor flex. */
+    justify-content: space-between;
+    /* Alinea los elementos en el eje transversal del contenedor flex. */
+    align-items: center;
+    /* Define el espacio entre elementos de una cuadrícula o contenedor flex. */
+    gap: 15px;
+}
+
+.footer-inner p {
+    /* Define el espacio exterior alrededor del elemento. */
+    margin: 0;
+}
+
+.footer-home {
+    /* Establece el color del texto. */
+    color: white;
+    /* Controla decoraciones del texto, como el subrayado. */
+    text-decoration: none;
+}
+
+/* DISEÑO ADAPTABLE: en celulares se muestra una sola columna. */
+@media (max-width: 700px) {
+    .header-inner,
+    .footer-inner {
+        /* Esta propiedad CSS controla el valor de «flex-direction» para el elemento seleccionado. */
+        flex-direction: column;
+        /* Alinea el texto horizontalmente. */
+        text-align: center;
+    }
+
+    .main-nav {
+        /* Permite que los elementos flex pasen a otra línea si no entran. */
+        flex-wrap: wrap;
+        /* Distribuye los elementos en el eje principal del contenedor flex. */
+        justify-content: center;
+        /* Define el espacio entre elementos de una cuadrícula o contenedor flex. */
+        gap: 10px 18px;
+    }
+
+    .destinos-seccion {
+        /* Define cuántas columnas tiene la cuadrícula y su tamaño. */
+        grid-template-columns: 1fr;
+    }
+
+    .content-card.with-photo {
+        /* Define cuántas columnas tiene la cuadrícula y su tamaño. */
+        grid-template-columns: 1fr;
+    }
+
+    .inline-photo {
+        /* Indica en qué columna o columnas se ubica un elemento de la cuadrícula. */
+        grid-column: 1;
+        /* Indica en qué fila o filas se ubica un elemento de la cuadrícula. */
+        grid-row: auto;
+    }
+
+    .inline-photo img {
+        /* Define la altura del elemento. */
+        height: 220px;
+    }
+
+    .welcome {
+        /* Define el espacio interior entre el contenido y el borde. */
+        padding: 25px;
+    }
+
+    .welcome h1 {
+        /* Define el tamaño de la letra. */
+        font-size: 29px;
+    }
+}
